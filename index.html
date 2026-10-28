@@ -1,1 +1,281 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CleanConnect | Cleaning Made Easy</title>
+<meta name="description" content="Book reliable home cleaning services in Port Harcourt, Nigeria with CleanConnect.">
+<style>
+:root{--green:#137c58;--dark:#12352b;--cream:#f7faf6;--gold:#f2c66d}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:#24352d;line-height:1.6}
+header{background:white;padding:16px 6%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid #e5ece5}
+.logo{font-size:23px;font-weight:800;color:var(--green)}
+nav a{color:var(--dark);text-decoration:none;margin:0 7px;font-size:14px;font-weight:bold}
+.hero{padding:60px 6%;background:linear-gradient(120deg,#12352b,#137c58);color:white}
+.hero h1{font-size:clamp(34px,7vw,54px);line-height:1.12;margin:12px 0}
+.hero p{max-width:560px;color:#e2f2e8}
+.btn{display:inline-block;background:var(--gold);color:#18372b;padding:12px 18px;border:0;border-radius:9px;font-weight:bold;text-decoration:none;cursor:pointer}
+section{padding:38px 6%;scroll-margin-top:20px}
+h2{color:var(--dark);line-height:1.2}
+.muted{color:#65756c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;border:1px solid #e5ece5;border-radius:15px;padding:20px;box-shadow:0 4px 16px #12352b08}
+.price{font-size:25px;font-weight:800;color:var(--green)}
+form{display:grid;gap:12px}
+label{font-size:14px;font-weight:bold}
+input,select,textarea{display:block;width:100%;margin-top:5px;padding:12px;border:1px solid #cdd9d0;border-radius:8px;background:white;font:inherit}
+textarea{min-height:85px;resize:vertical}
+button[type=submit]{background:var(--green);color:white;padding:13px;border:0;border-radius:9px;font-weight:bold;font-size:16px;cursor:pointer}
+.notice{font-size:13px;background:#f0f7ef;padding:12px;border-radius:8px}
+.status{font-weight:bold;color:var(--green);overflow-wrap:anywhere}
+footer{background:var(--dark);color:white;padding:28px 6%;text-align:center}
+footer a{color:#f6d58a}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🧹 CleanConnect</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#booking">Book</a>
+    <a href="#cleaners">Join Us</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <p>YOUR HOME. OUR CARE.</p>
+  <h1>A cleaner home,<br>without the stress.</h1>
+  <p>Book home cleaning in Port Harcourt with CleanConnect. Tell us what you need, and we'll contact you to confirm the details.</p>
+  <a class="btn" href="#booking">Request a Cleaning →</a>
+</div>
+
+<section id="services">
+  <h2>Cleaning services</h2>
+  <p class="muted">Choose the service that suits your home. Final pricing depends on the size and condition of the space.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>🏠 Regular Cleaning</h3>
+      <p>For everyday home cleaning and upkeep.</p>
+      <div class="price">₦8,000</div>
+      <p class="muted">Starting price</p>
+      <a class="btn" href="#booking">Book this service</a>
+    </div>
+    <div class="card">
+      <h3>✨ Deep Cleaning</h3>
+      <p>For a more detailed clean of your living space.</p>
+      <div class="price">₦15,000</div>
+      <p class="muted">Starting price</p>
+      <a class="btn" href="#booking">Book this service</a>
+    </div>
+    <div class="card">
+      <h3>📦 Move-in / Move-out</h3>
+      <p>Cleaning before moving into or leaving a property.</p>
+      <div class="price">₦20,000</div>
+      <p class="muted">Starting price</p>
+      <a class="btn" href="#booking">Book this service</a>
+    </div>
+  </div>
+  <p class="notice">These are initial suggested prices, not a confirmed quote. CleanConnect will confirm the scope and final price with you before accepting the job.</p>
+</section>
+
+<section id="booking">
+  <div class="grid">
+    <div>
+      <h2>Book a cleaning</h2>
+      <p class="muted">Complete this form and we'll review your request. Your booking is not confirmed until we contact you.</p>
+      <div class="card">
+        <form id="bookingForm">
+          <label>Full name
+            <input name="customer_name" required maxlength="100" placeholder="Your full name">
+          </label>
+          <label>Phone number
+            <input name="phone" required type="tel" maxlength="25" placeholder="Your active phone number">
+          </label>
+          <label>Cleaning service
+            <select name="service_key" id="service" required>
+              <option value="regular">Regular Cleaning — ₦8,000</option>
+              <option value="deep">Deep Cleaning — ₦15,000</option>
+              <option value="move">Move-in / Move-out — ₦20,000</option>
+            </select>
+          </label>
+          <label>Area in Port Harcourt
+            <input name="area" required placeholder="e.g. Rumuokwurusi">
+          </label>
+          <label>Full cleaning address
+            <input name="address" required maxlength="300" placeholder="Street, estate or landmark">
+          </label>
+          <label>Preferred date
+            <input name="preferred_date" required type="date" id="date">
+          </label>
+          <label>Preferred time
+            <select name="preferred_time" required>
+              <option value="">Choose a time</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </label>
+          <label>Extra details (optional)
+            <textarea name="notes" maxlength="1000" placeholder="Number of rooms, cleaning needs, etc."></textarea>
+          </label>
+          <button type="submit">Send Booking Request</button>
+          <p id="bookingMessage" class="status" role="status"></p>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <h3>What happens next?</h3>
+      <p>1. You send your request.</p>
+      <p>2. We review the details and contact you.</p>
+      <p>3. We confirm the final price, date and cleaner with you.</p>
+      <p class="muted">Please wait for confirmation before expecting a cleaner to arrive. Don't submit sensitive financial details in this form.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cleaners">
+  <div class="grid">
+    <div>
+      <h2>Work with CleanConnect</h2>
+      <p class="muted">Are you a reliable cleaner in Port Harcourt? Apply to join our growing team.</p>
+    </div>
+    <div class="card">
+      <form id="cleanerForm">
+        <label>Full name
+          <input name="full_name" required maxlength="100" placeholder="Your full name">
+        </label>
+        <label>Phone number
+          <input name="phone" required type="tel" maxlength="25" placeholder="Your phone number">
+        </label>
+        <label>Area you work in
+          <input name="service_area" required placeholder="e.g. Rumuokwurusi">
+        </label>
+        <label>Cleaning experience
+          <select name="experience" required>
+            <option value="">Choose one</option>
+            <option>Beginner</option>
+            <option>Less than 1 year</option>
+            <option>1–3 years</option>
+            <option>Over 3 years</option>
+          </select>
+        </label>
+        <label>Services you can provide
+          <input name="services" required maxlength="300" placeholder="e.g. regular, deep cleaning">
+        </label>
+        <button type="submit">Submit Application</button>
+        <p id="cleanerMessage" class="status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>CleanConnect</h3>
+  <p>Making home cleaning easier in Port Harcourt, Nigeria.</p>
+  <p>Reliable service starts with a clear conversation.</p>
+  <small>© <span id="year"></span> CleanConnect. All rights reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* Add your Supabase Project URL and publishable key here later. */
+const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+let db = null;
+
+if (SUPABASE_URL.startsWith("https://") &&
+    !SUPABASE_URL.includes("YOUR_") &&
+    SUPABASE_PUBLISHABLE_KEY &&
+    !SUPABASE_PUBLISHABLE_KEY.includes("YOUR_")) {
+  db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("date").min = new Date().toISOString().split("T")[0];
+
+document.querySelectorAll('a[href="#booking"]').forEach(link => {
+  link.addEventListener("click", () => {
+    const service = link.closest(".card")?.querySelector("h3")?.textContent || "";
+    const selector = document.getElementById("service");
+    if (service.includes("Regular")) selector.value = "regular";
+    if (service.includes("Deep")) selector.value = "deep";
+    if (service.includes("Move")) selector.value = "move";
+  });
+});
+
+document.getElementById("bookingForm").addEventListener("submit", async event => {
+  event.preventDefault();
+  const message = document.getElementById("bookingMessage");
+  if (!db) {
+    message.textContent = "Website setup is not finished yet. Connect Supabase to receive requests.";
+    return;
+  }
+
+  const form = new FormData(event.target);
+  const prices = {
+    regular: { customer: 8000, cleaner: 5000 },
+    deep: { customer: 15000, cleaner: 9000 },
+    move: { customer: 20000, cleaner: 12000 }
+  };
+  const key = form.get("service_key");
+  const p = prices[key];
+  const bookingRef = "CC-" + Date.now().toString().slice(-8);
+
+  const booking = {
+    booking_ref: bookingRef,
+    customer_name: form.get("customer_name").trim(),
+    phone: form.get("phone").trim(),
+    service_key: key,
+    area: form.get("area").trim(),
+    address: form.get("address").trim(),
+    preferred_date: form.get("preferred_date"),
+    preferred_time: form.get("preferred_time"),
+    notes: form.get("notes").trim(),
+    customer_price: p.customer,
+    cleaner_pay: p.cleaner,
+    status: "pending"
+  };
+
+  message.textContent = "Sending your request...";
+  const { error } = await db.from("bookings").insert(booking);
+  if (error) {
+    console.error(error);
+    message.textContent = "Sorry, we couldn't send that request. Please check your details and try again.";
+    return;
+  }
+  event.target.reset();
+  message.textContent = "Request received! Your reference is " + bookingRef + ". We'll contact you to confirm.";
+});
+
+document.getElementById("cleanerForm").addEventListener("submit", async event => {
+  event.preventDefault();
+  const message = document.getElementById("cleanerMessage");
+  if (!db) {
+    message.textContent = "Website setup is not finished yet. Connect Supabase to receive applications.";
+    return;
+  }
+  const form = new FormData(event.target);
+  const application = {
+    full_name: form.get("full_name").trim(),
+    phone: form.get("phone").trim(),
+    service_area: form.get("service_area").trim(),
+    experience: form.get("experience"),
+    services: form.get("services").trim(),
+    status: "new"
+  };
+  message.textContent = "Sending your application...";
+  const { error } = await db.from("cleaner_applications").insert(application);
+  if (error) {
+    console.error(error);
+    message.textContent = "Sorry, we couldn't send your application. Please try again.";
+    return;
+  }
+  event.target.reset();
+  message.textContent = "Application received! Thank you for your interest.";
+});
+</script>
+</body>
+</html>
